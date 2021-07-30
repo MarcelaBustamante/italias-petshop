@@ -1,0 +1,13 @@
+INICIO
+PRODUCTOS (MANTITAS, CAMAS, ROPA, BOLSOS TRANSPORTADORES)
+CONTACTO-> celular esta pendiente tefi me va a pasar,
+           telefono de negocio>43812021
+           mail> italiaspetshop@gmail.com
+           direccion> av belgrano 1677 -  Monserrat - CABA.
+
+ -form campos redondos
+ -costados con fondo de manchitas violeta
+- mensaje de 3 cuotas sin interes con el cálculo
+-flag y boton "sin stock"
+-destacados 1 de cada uno y cuando apoye el mouse aparezca un carrusel con tres fotos del siguiente           
+
