@@ -1,8 +1,9 @@
 <script>
   import user from "../stores/user";
   import { link } from "svelte-routing";
+  import { logoutUser} from '../stores/user';
   //logout func
-  import globalStore from "../../../ItaliaPetshop/src/stores/globalStore";
+  import globalStore from "../stores/globalStore";
 </script>
 
 {#if $user.jwt}
@@ -10,6 +11,7 @@
     href="/"
     class="logout-btn"
     on:click={() => {
+      logoutUser();
       globalStore.toggleItem("sidebar", false);
     }}>logout</a
   >

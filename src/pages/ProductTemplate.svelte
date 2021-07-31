@@ -2,7 +2,7 @@
   export let id;
   import { addToCart } from "../stores/cart";
 
-  import products from "../stores/defaultProducts";
+  import products from "../stores/products";
   import Loading from "../components/Loading.svelte";
   import { link } from "svelte-routing";
   import globalStore from "../stores/globalStore";
@@ -27,7 +27,7 @@
       <article>
         <h1>{product.title}</h1>
         <h2>${product.price}</h2>
-        <p>{product.description}</p>
+        <p class="product-title">{product.description}</p>
         <button
           class="btn btn-primary btn-block"
           on:click={() => {

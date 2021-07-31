@@ -10,6 +10,6 @@ import { link} from "svelte-routing";
 </div>
 <div class="product-footer">
     <p class="product-title">{title}</p>
-    <p class="product-title">${price}</p>
+    <p class="product-price">$ {price}</p>
 </div>
 </article>

@@ -3,7 +3,7 @@
   // global store
   import { link } from "svelte-routing";
   import CartButton from "../Cart/CartButton.svelte";
-  import globalStore from "../../../../ItaliaPetshop/src/stores/globalStore";
+  import globalStore from "../../stores/globalStore";
   let openSidebar = globalStore.toggleItem;
 </script>
 

@@ -1,5 +1,5 @@
 <script>
-  import globalStore from "../../../../ItaliaPetshop/src/stores/globalStore";
+  import globalStore from "../../stores/globalStore";
   import globalCart from "../../stores/cart";
   $: total = $globalCart.reduce((acc, curr) => {
     return (acc += curr.amount);
