@@ -10,6 +10,8 @@
   //router
   import { Router, Link, Route } from "svelte-routing";
   import Sidebar from "./components/Navbar/Sidebar.svelte";
+  //alert
+  import Alert from './components/Alert.svelte';
   //global store
   import globalStore from "./stores/globalStore";
 import Checkout from "./pages/Checkout.svelte";
@@ -24,6 +26,10 @@ import Checkout from "./pages/Checkout.svelte";
   {#if $globalStore.cart}
     <Cart />
   {/if}
+  {#if $globalStore.alert}
+    <Alert />
+  {/if}
+  
   <div>
     <Route path="/checkout" component={Checkout} />
     <Route path="/login" component={Login} />

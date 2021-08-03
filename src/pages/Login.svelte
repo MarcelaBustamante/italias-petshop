@@ -1,12 +1,14 @@
 <script>
     import loginUser from '../strapi/loginUser';
     import registerUser from '../strapi/registerUser';
+    import { navigate } from 'svelte-routing';
+    import globalStore from '../stores/globalStore'
     let email = '';
     let password = '';
     let username = 'default username';
     let isMember = true;
-
-    $: isEmty = !email || !password || !username
+//add alert
+    $: isEmty = !email || !password || !username || $globalStore.alert;
     //toggle member
     function toggleMember(){
         isMember = !isMember
@@ -19,6 +21,8 @@
 
     //handle submit
     async function handleSubmit(){
+       // add alert
+       globalStore.toggleItem("alert",true,"Cargando datos...porfavor espera.!");
        let user;
        if(isMember){
           user = await loginUser({email,password});
@@ -27,10 +31,13 @@
        }
        console.log(user)
        if(user){
-
-       } else {
-
-       }
+        navigate("/products");
+        globalStore.toggleItem("alert",true,"Bienvenido a Italia's petshop!")
+        //add alert
+        return;
+       } 
+       //add alert
+       globalStore.toggleItem("alert",true,"Hubo un error! por favor intente denuevo",true)
     }
 </script>
 

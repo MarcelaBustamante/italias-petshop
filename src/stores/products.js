@@ -19,8 +19,10 @@ async function setProducts (){
 // flatten products
 function flattenProducts(data) {
   return data.map(item => {
-    //let image = item.image.url;
-    let image = `${url}${item.image[0].url}`
+    //for cloudinary
+    let image = item.image[0].url;
+    //for local
+    //let image = `${url}${item.image[0].url}`
     return { ...item, image };
   });
 }

@@ -41,7 +41,7 @@
           </a>
         {:else}
           <p class="cart-login">
-            in order to checkout please
+            Para confirmar el pedido, por favor
             <a
               href="/login"
               use:link
@@ -49,7 +49,7 @@
                 globalStore.toggleItem("cart", false);
               }}
             >
-              login
+              Inicie sesión
             </a>
           </p>
         {/if}
